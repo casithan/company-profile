@@ -32,38 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #040814;
-      color: #f8fafc;
-    }
-    .glass {
-      background: rgba(15, 28, 63, 0.45);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(34, 211, 238, 0.15);
-    }
-    .glass-card {
-      background: linear-gradient(145deg, rgba(15, 28, 63, 0.65), rgba(9, 17, 38, 0.85));
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .glass-card:hover {
-      border-color: rgba(34, 211, 238, 0.45);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px -10px rgba(6, 182, 212, 0.25);
-    }
-    .grid-bg {
-      background-size: 40px 40px;
-      background-image: 
-        linear-gradient(to right, rgba(34, 211, 238, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
-    }
-    .glow-orb {
-      background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(4, 8, 20, 0) 70%);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased selection:bg-cyan-500 selection:text-navy-950">
 
@@ -153,5 +122,215 @@
               <div class="text-xs sm:text-sm text-slate-400">Serapan Kerja & Kuliah</div>
             </div>
             <div>
-              <div class="text-2xl sm:text-3
-              
+              <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400">4 Lab</div>
+              <div class="text-xs sm:text-sm text-slate-400">Cisco, MikroTik & Fiber</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-white">30+</div>
+              <div class="text-xs sm:text-sm text-slate-400">Mitra Industri & ISP</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Visual Card -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-2xl p-1 shadow-2xl">
+            <div class="bg-navy-950 rounded-xl overflow-hidden border border-white/10">
+              <div class="flex items-center justify-between px-4 py-3 bg-navy-900 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                </div>
+                <span class="text-xs font-mono text-slate-400">admin@tkj-core-router:~</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400">ONLINE</span>
+              </div>
+              <div class="p-5 font-mono text-xs sm:text-sm space-y-2.5 text-slate-300">
+                <p class="text-cyan-400">$ show system status --jurusan=TKJ</p>
+                <p class="text-slate-400">[OK] Initializing Network Topology...</p>
+                <div class="pl-3 border-l-2 border-cyan-500/40 space-y-1 text-xs">
+                  <p>• Routing & Switching : <span class="text-emerald-400">MikroTik MTCNA / Cisco CCNA</span></p>
+                  <p>• Server & Cloud      : <span class="text-emerald-400">Linux Debian, Docker, Proxmox</span></p>
+                  <p>• Fiber Optic         : <span class="text-emerald-400">FTTH Splicing & OTDR Active</span></p>
+                  <p>• Cyber Security      : <span class="text-emerald-400">Firewall, VPN & Hardening</span></p>
+                </div>
+                <p class="text-cyan-400 pt-2">$ ping masa-depan.id -c 3</p>
+                <p class="text-slate-400">64 bytes from karir-sukses: icmp_seq=1 ttl=64 time=1.2 ms</p>
+                <p class="text-emerald-400 animate-pulse">Ready to deploy next-gen IT engineers_</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Jurusan -->
+  <section id="tentang" class="py-20 bg-navy-900/50 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-5">
+          <span class="text-cyan-400 font-mono text-sm uppercase tracking-wider">// Profil Singkat</span>
+          <h2 class="text-3xl sm:text-4xl font-bold">Mengapa Memilih Jurusan TKJ?</h2>
+          <p class="text-slate-300 leading-relaxed">
+            Di era transformasi digital, hampir seluruh sektor bisnis, pemerintahan, dan pendidikan bergantung pada konektivitas internet dan pusat data (data center). Jurusan TKJ membekali siswa dengan kombinasi kemampuan <strong>praktik perangkat keras (hardware)</strong>, <strong>konfigurasi jaringan</strong>, serta <strong>administrasi sistem server</strong>.
+          </p>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xs font-bold">✓</span>
+              <span><strong>70% Praktik, 30% Teori:</strong> Pembelajaran berbasis proyek nyata di laboratorium berstandar industri.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xs font-bold">✓</span>
+              <span><strong>Sertifikasi Kompetensi:</strong> Uji kompetensi keahlian (UKK) bersama asesor BNSP dan vendor jaringan.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xs font-bold">✓</span>
+              <span><strong>Teaching Factory (TeFa):</strong> Siswa mengelola jaringan internet sekolah dan layanan perbaikan IT secara profesional.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="glass-card p-6 rounded-2xl">
+            <div class="w-10 h-10 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center mb-4 font-bold text-lg">01</div>
+            <h3 class="font-bold text-lg mb-2">Visi Jurusan</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Menjadi pusat unggulan pendidikan vokasi bidang infrastruktur jaringan dan teknologi cloud yang adaptif, berkarakter, dan berdaya saing global.</p>
+          </div>
+          <div class="glass-card p-6 rounded-2xl">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center mb-4 font-bold text-lg">02</div>
+            <h3 class="font-bold text-lg mb-2">Misi Utama</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Menyelenggarakan pembelajaran berbasis industri, sertifikasi profesi, serta membangun budaya kerja profesional dan inovatif.</p>
+          </div>
+          <div class="glass-card p-6 rounded-2xl sm:col-span-2">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-bold text-lg mb-1">Mitra Kelas Industri & Prakerin</h3>
+                <p class="text-sm text-slate-400">Bekerja sama dengan penyedia layanan internet (ISP), perusahaan telekomunikasi, dan data center regional.</p>
+              </div>
+              <span class="hidden sm:inline-block px-3 py-1 rounded-md bg-white/5 font-mono text-xs text-cyan-400">Link & Match</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kompetensi Keahlian -->
+  <section id="kompetensi" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-cyan-400 font-mono text-sm uppercase tracking-wider">// Kurikulum & Keahlian</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2">Kompetensi Inti yang Dipelajari</h2>
+        <p class="text-slate-400 mt-3">Klik pada setiap kartu kompetensi untuk melihat rincian materi silabus yang akan dikuasai siswa.</p>
+      </div>
+
+      <div id="competency-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Fasilitas Lab -->
+  <section id="fasilitas" class="py-20 bg-navy-900/50 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-cyan-400 font-mono text-sm uppercase tracking-wider">// Infrastruktur Belajar</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-2">Fasilitas Laboratorium TKJ</h2>
+        </div>
+        <p class="text-slate-400 max-w-md text-sm">Setiap laboratorium dilengkapi perangkat keras aktual agar siswa terbiasa dengan lingkungan kerja sesungguhnya.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-cyan-400 font-mono text-xs mb-3">LAB 01</div>
+          <h3 class="font-bold text-lg mb-2">Lab Routing & Switching</h3>
+          <p class="text-sm text-slate-400">Dilengkapi puluhan unit RouterBoard MikroTik, Cisco Catalyst Switch, dan rak server simulasi topologi WAN.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-cyan-400 font-mono text-xs mb-3">LAB 02</div>
+          <h3 class="font-bold text-lg mb-2">Lab Fiber Optic & FTTH</h3>
+          <p class="text-sm text-slate-400">Perangkat Fusion Splicer, OTDR, OPM, OLT, dan ONT untuk simulasi instalasi jaringan internet fiber ke rumah.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-cyan-400 font-mono text-xs mb-3">LAB 03</div>
+          <h3 class="font-bold text-lg mb-2">Lab Server & Cloud</h3>
+          <p class="text-sm text-slate-400">Server Rackmount Dell PowerEdge untuk praktik virtualisasi Proxmox, Linux Server, Docker, dan hosting web.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="text-cyan-400 font-mono text-xs mb-3">LAB 04</div>
+          <h3 class="font-bold text-lg mb-2">Workshop Hardware & IoT</h3>
+          <p class="text-sm text-slate-400">Area perakitan PC, troubleshooting perangkat keras, solder station, serta pengembangan mikrokontroler IoT.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Karya & Proyek Siswa -->
+  <section id="proyek" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-6">
+        <div>
+          <span class="text-cyan-400 font-mono text-sm uppercase tracking-wider">// Portofolio</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-2">Karya & Proyek Unggulan Siswa</h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2" id="project-filters">
+          <button data-filter="all" class="filter-btn active px-4 py-2 rounded-lg text-sm font-semibold bg-cyan-500 text-navy-950 transition">Semua</button>
+          <button data-filter="jaringan" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium glass text-slate-300 hover:text-white transition">Jaringan & ISP</button>
+          <button data-filter="server" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium glass text-slate-300 hover:text-white transition">Server & Cloud</button>
+          <button data-filter="iot" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium glass text-slate-300 hover:text-white transition">Keamanan & IoT</button>
+        </div>
+      </div>
+
+      <div id="projects-grid" class="grid md:grid-cols-3 gap-6">
+        <!-- Projects injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Prospek Karir -->
+  <section id="karir" class="py-20 bg-navy-900/50 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-cyan-400 font-mono text-sm uppercase tracking-wider">// Masa Depan Lulusan</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2">Prospek Karir Lulusan TKJ</h2>
+        <p class="text-slate-400 mt-3">Lulusan memiliki fleksibilitas tinggi untuk langsung bekerja, berwirausaha di bidang IT, maupun melanjutkan kuliah.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0 font-mono font-bold">NE</div>
+          <div>
+            <h3 class="font-bold text-white">Network Engineer</h3>
+            <p class="text-xs text-slate-400 mt-1">Merancang, membangun, dan memelihara infrastruktur jaringan skala perusahaan maupun ISP.</p>
+          </div>
+        </div>
+        <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0 font-mono font-bold">SA</div>
+          <div>
+            <h3 class="font-bold text-white">System Administrator</h3>
+            <p class="text-xs text-slate-400 mt-1">Mengelola server Linux/Windows, database, layanan cloud, dan virtualisasi data center.</p>
+          </div>
+        </div>
+        <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0 font-mono font-bold">IT</div>
+          <div>
+            <h3 class="font-bold text-white">IT Support Specialist</h3>
+            <p class="text-xs text-slate-400 mt-1">Menangani pemeliharaan perangkat keras, sistem operasi, serta dukungan teknis operasional.</p>
+          </div>
+        </div>
+        <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0 font-mono font-bold">FO</div>
+          <div>
+            <h3 class="font-bold text-white">Fiber Optic Technician</h3>
+            <p class="text-xs text-slate-400 mt-1">Instalasi, penyambungan (splicing), dan pemeliharaan jaringan tulang punggung serat optik.</p>
+          </div>
+        </div>
+        <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0 font-mono font-bold">CS</div>
+          <div>
+            <h3 class="font-bold text-white">Junior Cyber Security Analyst</h3>
+            <p class="text-xs text-slate-400 mt-1">Memantau keamanan lalu lintas jaringan, konfigurasi firewall, dan mitigas
