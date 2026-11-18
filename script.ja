@@ -1,0 +1,210 @@
+// Data Kompetensi
+const competencies = [
+  {
+    tag: "01 • NETWORKING",
+    title: "Administrasi Infrastruktur Jaringan",
+    shortDesc: "Perancangan topologi, VLAN, routing dinamis/statis, dan manajemen bandwidth menggunakan perangkat MikroTik dan Cisco.",
+    topics: [
+      "Konfigurasi Switch Manageable & VLAN Trunking",
+      "Routing Statis & Dinamis (OSPF, BGP dasar)",
+      "Manajemen Bandwidth (Queue Tree, PCQ) & Hotspot",
+      "Load Balancing & Failover Multi-ISP"
+    ]
+  },
+  {
+    tag: "02 • SYSTEM & CLOUD",
+    title: "Administrasi Sistem Server",
+    shortDesc: "Instalasi dan pengelolaan server berbasis Linux Debian/Ubuntu serta layanan cloud dan virtualisasi modern.",
+    topics: [
+      "DNS Server, Web Server (Nginx/Apache), & Database",
+      "Mail Server, File Server (Samba), & DHCP",
+      "Virtualisasi menggunakan Proxmox VE & Docker Container",
+      "Manajemen Hosting & Otomatisasi Bash Scripting"
+    ]
+  },
+  {
+    tag: "03 • FIBER OPTIC",
+    title: "Teknologi Jaringan Berbasis Luas (WAN)",
+    shortDesc: "Instalasi kabel serat optik (FTTH), penyambungan core dengan fusion splicer, serta pengujian redaman sinyal.",
+    topics: [
+      "Pengenalan Kabel Fiber Optic & Arsitektur FTTH",
+      "Teknik Terminasi & Fusion Splicing",
+      "Pengukuran Redaman dengan OPM & OTDR",
+      "Konfigurasi OLT dan Modem ONT Pelanggan"
+    ]
+  },
+  {
+    tag: "04 • CYBER SECURITY",
+    title: "Keamanan Jaringan & Server",
+    shortDesc: "Melindungi infrastruktur jaringan dari serangan siber melalui konfigurasi firewall, VPN, dan sistem deteksi intrusi.",
+    topics: [
+      "Firewall Filtering, NAT, & Mangle Rules",
+      "Implementasi VPN Site-to-Site (WireGuard, IPsec, OpenVPN)",
+      "Hardening Linux Server & Sertifikat SSL/TLS",
+      "Monitoring Trafik Jaringan (Zabbix / Grafana)"
+    ]
+  },
+  {
+    tag: "05 • HARDWARE & OS",
+    title: "Komputer & Sistem Operasi Dasar",
+    shortDesc: "Perakitan perangkat keras komputer, diagnosa kerusakan komponen, serta instalasi berbagai sistem operasi.",
+    topics: [
+      "Perakitan PC & Troubleshooting Hardware",
+      "Instalasi & Konfigurasi Windows dan Distro Linux",
+      "Manajemen Partisi, Backup, & Recovery Data",
+      "Perawatan Berkala Perangkat IT"
+    ]
+  },
+  {
+    tag: "06 • IOT & VOIP",
+    title: "Layanan Jaringan & Internet of Things",
+    shortDesc: "Integrasi komunikasi suara berbasis IP (VoIP) dan otomasi perangkat pintar berbasis mikrokontroler.",
+    topics: [
+      "Konfigurasi Server VoIP (Asterisk / Briker)",
+      "Integrasi ESP32 / Arduino dengan Protokol MQTT",
+      "Smart Lab Monitoring Suhu & Kontrol Relay",
+      "Pengkabelan Terstruktur & Manajemen Rak Server"
+    ]
+  }
+];
+
+// Data Proyek Siswa
+const projects = [
+  {
+    category: "jaringan",
+    catLabel: "Jaringan & ISP",
+    title: "Rancang Bangun RT/RW Net & Hotspot Voucher",
+    desc: "Implementasi jaringan nirkabel jarak jauh dengan manajemen user voucher berbasis MikroTik dan Radius Server."
+  },
+  {
+    category: "server",
+    catLabel: "Server & Cloud",
+    title: "Private Cloud Storage & E-Learning Sekolah",
+    desc: "Deployment server Nextcloud dan Moodle di atas cluster virtualisasi Proxmox untuk kebutuhan belajar mandiri."
+  },
+  {
+    category: "iot",
+    catLabel: "Keamanan & IoT",
+    title: "Sistem Monitoring Suhu Ruang Server Otomatis",
+    desc: "Sensor suhu berbasis ESP32 yang mengirimkan notifikasi real-time ke Telegram jika suhu ruang server melebihi batas."
+  },
+  {
+    category: "jaringan",
+    catLabel: "Jaringan & ISP",
+    title: "Simulasi Jaringan FTTH Antar Gedung",
+    desc: "Instalasi jalur kabel fiber optik distribusi lengkap dengan ODP, splicing, dan pengujian kualitas sinyal OPM."
+  },
+  {
+    category: "server",
+    catLabel: "Server & Cloud",
+    title: "Network Monitoring System dengan Grafana",
+    desc: "Dashboard visual untuk memantau kesehatan router, penggunaan bandwidth, dan uptime seluruh server sekolah."
+  },
+  {
+    category: "iot",
+    catLabel: "Keamanan & IoT",
+    title: "Implementasi VPN & Firewall Anti-DDoS Dasar",
+    desc: "Pengamanan akses jarak jauh bagi administrator jaringan menggunakan terowongan terenkripsi WireGuard."
+  }
+];
+
+// Render Kompetensi
+const compGrid = document.getElementById('competency-grid');
+competencies.forEach((item) => {
+  const card = document.createElement('div');
+  card.className = 'glass-card p-6 rounded-2xl cursor-pointer flex flex-col justify-between';
+  card.innerHTML = `
+    <div>
+      <span class="text-xs font-mono text-cyan-400">${item.tag}</span>
+      <h3 class="text-xl font-bold mt-2 mb-2 text-white">${item.title}</h3>
+      <p class="text-sm text-slate-400 leading-relaxed">${item.shortDesc}</p>
+    </div>
+    <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-cyan-400">
+      <span>Lihat Silabus Praktik</span>
+      <span>&rarr;</span>
+    </div>
+  `;
+  card.addEventListener('click', () => openModal(item));
+  compGrid.appendChild(card);
+});
+
+// Modal Logic
+const modal = document.getElementById('comp-modal');
+const closeModalBtn = document.getElementById('close-modal');
+
+function openModal(item) {
+  document.getElementById('modal-tag').textContent = item.tag;
+  document.getElementById('modal-title').textContent = item.title;
+  document.getElementById('modal-desc').textContent = item.shortDesc;
+  const topicsList = document.getElementById('modal-topics');
+  topicsList.innerHTML = item.topics.map(t => `<li class="flex items-center gap-2"><span class="text-cyan-400">▹</span> ${t}</li>`).join('');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
+
+closeModalBtn.addEventListener('click', () => {
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+});
+
+// Render & Filter Proyek
+const projectsGrid = document.getElementById('projects-grid');
+const filterBtns = document.querySelectorAll('.filter-btn');
+
+function renderProjects(filter = 'all') {
+  projectsGrid.innerHTML = '';
+  const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+  
+  filtered.forEach(proj => {
+    const card = document.createElement('div');
+    card.className = 'glass-card p-6 rounded-2xl flex flex-col justify-between';
+    card.innerHTML = `
+      <div>
+        <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/15 text-cyan-400 text-xs font-mono mb-3">${proj.catLabel}</span>
+        <h3 class="font-bold text-lg text-white mb-2">${proj.title}</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">${proj.desc}</p>
+      </div>
+      <div class="mt-5 pt-3 border-t border-white/5 text-xs font-mono text-slate-500">
+        Status: Terimplementasi di Lab
+      </div>
+    `;
+    projectsGrid.appendChild(card);
+  });
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => {
+      b.classList.remove('bg-cyan-500', 'text-navy-950', 'font-semibold');
+      b.classList.add('glass', 'text-slate-300', 'font-medium');
+    });
+    btn.classList.remove('glass', 'text-slate-300', 'font-medium');
+    btn.classList.add('bg-cyan-500', 'text-navy-950', 'font-semibold');
+    renderProjects(btn.dataset.filter);
+  });
+});
+
+renderProjects();
+
+// Mobile Menu Toggle
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
+
+// Form Submit Handler
+const contactForm = document.getElementById('contact-form');
+const formFeedback = document.getElementById('form-feedback');
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  formFeedback.classList.remove('hidden');
+  contactForm.reset();
+});
