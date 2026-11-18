@@ -333,4 +333,86 @@
           <div class="w-10 h-10 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0 font-mono font-bold">CS</div>
           <div>
             <h3 class="font-bold text-white">Junior Cyber Security Analyst</h3>
-            <p class="text-xs text-slate-400 mt-1">Memantau keamanan lalu lintas jaringan, konfigurasi firewall, dan mitigas
+            <p class="text-xs text-slate-400 mt-1">Memantau keamanan lalu lintas jaringan, konfigurasi firewall, dan mitigas serangan siber.</p>
+          </div>
+        </div>
+        <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0 font-mono font-bold">EN</div>
+          <div>
+            <h3 class="font-bold text-white">Technopreneur IT</h3>
+            <p class="text-xs text-slate-400 mt-1">Membuka jasa layanan internet RT/RW Net resmi, konsultan jaringan, atau servis komputer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA & Form Kontak / PPDB -->
+  <section id="daftar" class="py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-cyan-500/30 relative overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-10 items-center relative z-10">
+          <div class="space-y-4">
+            <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-400 text-xs font-mono">PENERIMAAN PESERTA DIDIK BARU</span>
+            <h2 class="text-3xl font-bold">Siap Bergabung Menjadi Bagian dari TKJ?</h2>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Dapatkan informasi lengkap mengenai jadwal pendaftaran, beasiswa prestasi, serta tur kunjungan laboratorium TKJ.
+            </p>
+            <div class="pt-2 space-y-2 text-sm text-slate-300">
+              <p>📍 <strong>Lokasi Lab:</strong> Gedung Teknologi Lantai 2, Kampus SMK</p>
+              <p>📧 <strong>Email:</strong> tkj@smkteknologi.sch.id</p>
+              <p>📞 <strong>Hotline PPDB:</strong> (021) 555-0192 / 0812-3456-7890</p>
+            </div>
+          </div>
+
+          <form id="contact-form" class="space-y-4 bg-navy-950/70 p-6 rounded-2xl border border-white/10">
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Nama Lengkap Calon Siswa / Orang Tua</label>
+              <input type="text" required placeholder="Contoh: Ahmad Fauzan" class="w-full px-3.5 py-2.5 rounded-lg bg-navy-900 border border-white/10 text-sm text-white focus:outline-none focus:border-cyan-400" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Nomor WhatsApp</label>
+              <input type="tel" required placeholder="0812xxxxxxxx" class="w-full px-3.5 py-2.5 rounded-lg bg-navy-900 border border-white/10 text-sm text-white focus:outline-none focus:border-cyan-400" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Asal Sekolah (SMP/MTs)</label>
+              <input type="text" required placeholder="Contoh: SMP Negeri 1" class="w-full px-3.5 py-2.5 rounded-lg bg-navy-900 border border-white/10 text-sm text-white focus:outline-none focus:border-cyan-400" />
+            </div>
+            <button type="submit" class="w-full py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-950 font-bold text-sm transition shadow-lg shadow-cyan-500/20">
+              Minta Brosur & Jadwal PPDB
+            </button>
+            <div id="form-feedback" class="hidden text-xs text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 text-center">
+              Terima kasih! Tim PPDB Jurusan TKJ akan segera menghubungi nomor WhatsApp Anda.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Footer -->
+  <footer class="border-t border-white/10 py-8 bg-navy-950 text-center text-sm text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="font-semibold text-white">TKJ<span class="text-cyan-400">.NET</span> — Program Keahlian Teknik Komputer & Jaringan</div>
+      <div>&copy; 2026 Hak Cipta Dilindungi. Dibuat untuk Pendidikan Vokasi Indonesia.</div>
+    </div>
+  </footer>
+
+  <!-- Modal Detail Kompetensi -->
+  <div id="comp-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy-950/80 backdrop-blur-sm">
+    <div class="glass-card bg-navy-900 max-w-lg w-full rounded-2xl p-6 border border-cyan-500/30 shadow-2xl relative">
+      <button id="close-modal" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <span id="modal-tag" class="text-xs font-mono text-cyan-400 uppercase"></span>
+      <h3 id="modal-title" class="text-2xl font-bold mt-1 mb-3"></h3>
+      <p id="modal-desc" class="text-sm text-slate-300 mb-4 leading-relaxed"></p>
+      <div class="bg-navy-950/70 rounded-xl p-4 border border-white/10">
+        <div class="text-xs font-semibold text-slate-400 uppercase mb-2">Materi Praktik Utama:</div>
+        <ul id="modal-topics" class="space-y-2 text-sm text-slate-200"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
